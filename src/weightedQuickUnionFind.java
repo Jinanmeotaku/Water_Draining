@@ -1,7 +1,11 @@
+// weighted quick union find implementation 
+// with path compression and union by size
+// to find the root of a node and to merge two trees
+
 
 public class weightedQuickUnionFind {
-    private int[] parent;   // parent[i] = parent of i
-    private int[] size;     // size[i]   = number of nodes in tree rooted at i
+    private int[] parent;   // parent[i] is the parent of i
+    private int[] size;     // size[i]   is the number of nodes in tree rooted at i
 
     // Constructor: initialize N elements (0 through N–1)
     public weightedQuickUnionFind(int N) {
@@ -13,7 +17,7 @@ public class weightedQuickUnionFind {
         }
     }
 
-    // Find the root of p (follow parent pointers until p == parent[p])
+    // find the root of p 
     public int root(int p) {
         while (p != parent[p]) {
             p = parent[p];
@@ -21,12 +25,12 @@ public class weightedQuickUnionFind {
         return p;
     }
 
-    // Are p and q in the same component?
+    // checks if p and q in the same component
     public boolean connected(int p, int q) {
         return root(p) == root(q);
     }
 
-    // Merge the trees containing p and q
+    // merge the trees containing p and q
     public void union(int p, int q) {
         int rootP = root(p);
         int rootQ = root(q);
@@ -36,6 +40,8 @@ public class weightedQuickUnionFind {
         if (size[rootP] < size[rootQ]) {
             parent[rootP] = rootQ;
             size[rootQ] += size[rootP];
+
+        // attach larger tree under smaller tree’s root
         } else {
             parent[rootQ] = rootP;
             size[rootP] += size[rootQ];

@@ -1,3 +1,4 @@
+// the main class that runs the full program usign the path to the sample 
 
 public class app { 
     public static void main(String[] args) throws Exception { 
