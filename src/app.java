@@ -3,7 +3,7 @@
 public class app { 
     public static void main(String[] args) throws Exception { 
         // replace the path with the path to your sample file here 
-     soil soil = new soil("C:/Users/jalma/OneDrive/Desktop/Spring 2025/almaliky_jinan_project1/sample3.txt"); 
+     soil soil = new soil("path_to_your_file.txt"); 
      if (soil.doesDrain()) { 
       System.out.println("Allows water to drain"); 
      } else { 

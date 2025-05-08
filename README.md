@@ -20,32 +20,38 @@ almaliky_jinan_project1/
 └── sample3.txt
 
 - **src/**: contains `.java` source files  
-- **sample*.txt**: example soil grids for testing
+- **sample.txt**: example soil grids for testing
 
 ## Building (Terminal)
 
 From the project root in your terminal for
-running in VS Code, Open the project folder in VS Code:
+running in VS Code run :
 
 ```bash
 code .
 ```
+In VS Code:
 
+```plaintext
 In the Java Projects view (or via Command Palette > Java: Focus on Java Projects View), locate the App (or app) class under your workspace.
 
 In the app.java file:
 
-> 1. Enter the relative path to your inputfile on line 5
-> 2. Hit Run. The VS Code console will show either:
+1. Enter the relative path to your input file on line 5.
 
-```
-      Allows water to drain
-```
+2. Hit Run. The VS Code console will show either:
 
-```
-      Doesn't allow water to drain
+      "Allows water to drain"
+      or 
+      "Doesn't allow water to drain"
+
 ```
 
 ## Testing with Sample Files
 
 Repeat the Run step, supplying each sample file name in turn (sample1.txt, sample2.txt, sample3.txt) to verify that your solution produces the expected results.
+
+## Expected result for samples 
+
+for the attached sample.txt files the expected result is:
+1 and 3 allow water to drain while 2 does not. 

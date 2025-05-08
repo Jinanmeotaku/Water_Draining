@@ -48,7 +48,7 @@ public class soil {
         connectOpenCells();
     }
 
-    // map 2D  1D index in UF
+    // map 2D coordinates to 1D index
     private int index(int row, int col) {
         return row * n + col;
     }
