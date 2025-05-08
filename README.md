@@ -6,7 +6,6 @@ This Java project implements the Weighted Quick Union (union-find) algorithm to 
 
 - Java JDK 8 or higher installed.  
 - VS Code with the Java Extension Pack.
-- alg4.jar
 
 ## Project Structure
 
